@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <picture class="hero__container">
+        <img
+          class="hero__image"
+          src="./assets/images/illustration-sign-up-mobile.svg"
+          alt="hero"
+        />
+      </picture>
+    </section>
+
+    <section class="newsletter-content">
+      <header class="header">
+        <h1 class="header__title">Stay updated!</h1>
+      </header>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+      <ul>
+        <li>
+          <img
+            class="list-point"
+            src="./assets/images/icon-list.svg"
+            alt="list-point"
+          />
+          <p>Product discovery and building what matters</p>
+        </li>
+
+        <li>
+          <img
+            class="list-point"
+            src="./assets/images/icon-list.svg"
+            alt="list-point"
+          />
+          <p>Measuring to ensure updates are a success</p>
+        </li>
+        <li>
+          <img
+            class="list-point"
+            src="./assets/images/icon-list.svg"
+            alt="list-point"
+          />
+          <p>And much more!</p>
+        </li>
+      </ul>
+
+      <form id="form" class="form">
+        <div class="form__label-container">
+          <label for="email">Email address</label>
+          <span class="form__error">Valid email required</span>
+        </div>
+        <input
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          class="form__input"
+          placeholder="email@company.com"
+          required
+          type="email"
+          name="email"
+          id="email"
+          value=""
+        />
+        <button class="form__button" type="submit">
+          Subscribe to monthly newsletter
+        </button>
+      </form>
+    </section>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </body>
+</html>

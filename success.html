@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success</title>
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <section class="success">
+      <img src="./assets/images/icon-success.svg" alt="success" />
+      <h1>Thanks for subscribing !</h1>
+      <p id="confirmatory-message"></p>
+      <button onclick="dismiss()" class="form__button">Dismiss message</button>
+    </section>
+
+    <script>
+      let urlParams = new URLSearchParams(window.location.search);
+      let paragraph = document.querySelector("#confirmatory-message");
+      let email = urlParams.get("email");
+      paragraph.innerHTML = `A confirmation email has been sent to <b>${email}</b>. Please open it and click the button inside to confirm your subscription.`;
+        function dismiss(){
+            window.location="index.html"
+        }
+    </script>
+  </body>
+  <link rel="stylesheet" href="style.css" />
+</html>
